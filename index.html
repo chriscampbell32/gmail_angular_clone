@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
-    <title>gmail clone</title>
+    <title>Angular email app</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div></div>
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.22/angular.min.js
-
-Copy
-"></script>
+    <div ng-controller="TestCtrl">
+        <h1>{{title}}</h1>
+        <input type="text" ng-model="title" placeholder="write a title here">
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.22/angular.js"></script>
+    
+    <script> 
+    function TestCtrl($scope){
+        $scope.title = "Write a title here...";
+        };
+    </script>
 </body>
 </html>
